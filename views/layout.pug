@@ -2,6 +2,16 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css", integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk", crossorigin="anonymous")
+
+
   body
+    div(class='w-100')
+      header(class='d-flex justify-content-center py-3 mb-4 border-bottom w-10 space-around') 
+        a(href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none col-8")
+          span(class="h3 fs-10 w-100 font-weight-bold") My Message Board
+        a(href="/" class="nav-link d-flex align-items-center") Home
+        a(href="/new", class="mx-5 w-10 btn btn-lg btn-primary" ) Add new
     block content

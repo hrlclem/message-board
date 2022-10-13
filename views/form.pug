@@ -1,16 +1,17 @@
 extends layout
 
 block content
-  .title
-    h1= title
-  .container
-    form(action='/new', method='POST')
-      p
-        | user: 
-        input(type='text', name='user', value='')
-        | text: 
-        input(type='text', name='text', value='')
-      input(type='submit', value='Submit')
+  div(class='mx-5')
+    div(class='m-4')
+      div(class='m-4 h5 fw-normal')= title
+    .container
+      form(action='/new', method='POST')
+        p( class="mb-3")
+          | Enter your username: 
+          input(type='text', class="form-control mb-3", name='user', value='')
+          | Enter your text: 
+          input(type='text', class="form-control mb-3", name='text', value='')
+        input(type='submit', class="w-100 btn btn-lg btn-primary", value='Submit')
         
 
       

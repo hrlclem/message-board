@@ -1,15 +1,18 @@
 extends layout
 
 block content
-  .title
-    h1= title
-  .container
-    .wrapper 
-      ul 
-        each message in messages
-          h2=message.user
-          h2=message.added
-    <a href="/new" class="button">Add new</a>
+  div(class='mx-5')
+    div(class='mx-5 flex d-flex justify-content-center align-items-center space-between mb-4')
+      div(class='h4 w-20 mx-5 p-0 col-9')= title
+      a(href="/new", class="fs-1 w-30 btn btn-primary" ) Add new
+    .container
+      .wrapper 
+        ul 
+          li(class='list-unstyled')
+              each message in messages
+                div(class='fs-5 font-weight-bold')=message.user
+                div(class='fs-4')=message.text
+                div(class='fs-1')=message.added
 
 
       

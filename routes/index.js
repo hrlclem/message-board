@@ -15,7 +15,7 @@ const messages = [
 ];
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Message Board', messages: messages });
+  res.render('index', { title: 'All messages', messages: messages });
 });
 
 router.post('/new', function(req, res, next) {
