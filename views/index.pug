@@ -1,6 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Hey to #{title}
+  .title
+    h1= title
+  .container
+    .wrapper 
+      ul 
+        each message in messages
+          h2=message.user
+          h2=message.added
+    <a href="/new" class="button">Add new</a>
+
+
+      
 

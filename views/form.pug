@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .title
+    h1= title
+  .container
+    form(action='/new', method='POST')
+      p
+        | user: 
+        input(type='text', name='user', value='')
+        | text: 
+        input(type='text', name='text', value='')
+      input(type='submit', value='Submit')
+        
+
+      
+
